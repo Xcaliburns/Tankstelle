@@ -4,10 +4,10 @@ import axios from 'axios';
 
 
 function Search() {
-
+    const apikey= import.meta.env.VITE_API_KEY;
   const [results, setResults] = useState([]);
   const [query, setQuery] = useState("");
-  const baseURL ='https://creativecommons.tankerkoenig.de/json/list.php?lat=52.521&lng=13.438&rad=1.5&sort=dist&type=all&apikey=d49be2df-73f2-fc40-3974-8bb066bf546b'
+  const baseURL ='https://creativecommons.tankerkoenig.de/json/list.php?lat=52.521&lng=13.438&rad=1.5&sort=dist&type=all&apikey=apiKey'
 
 
 const handleChange = (e) => {
@@ -24,7 +24,7 @@ const handleChange = (e) => {
       });
   };
 
-  console.log(query);
+  console.log(results);
   return (
     <><div className="search">
         <input
